@@ -56,7 +56,7 @@ class VGG(nn.Module):
 
 def make_layers(cfg, batch_norm=False, in_channels=3, num_classes=10):
     ######################### SFM beg #########################
-    layers = [SFM(eps=8 / 255)]
+    layers = [SFM(eps=8 / 255)]  # 16 / 255
     ######################### SFM end #########################
 
     # layers = []

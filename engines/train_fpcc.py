@@ -118,7 +118,7 @@ def train(train_loader, model, criterion, optimizer, device, args):
         loss0_meter.update(loss_ce.item(), inputs.size(0))  # c
         loss1_meter.update(loss_pt.item(), inputs.size(0))  # 1 c
 
-        loss_ce = loss_ce + loss_pt
+        loss_ce = loss_ce + loss_pt  # *10
 
         optimizer.zero_grad()  # 1
         loss_ce.backward()  # 2
